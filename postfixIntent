@@ -1,0 +1,29 @@
+{
+  "intents": [
+    {
+      "intent": "solvePostfix",
+      "slots": [
+        {
+          "name": "operand1",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "operand2",
+          "type": "AMAZON.NUMBER"
+        },
+        {
+          "name": "operator",
+          "type": "OPERATORS"
+        },
+        {
+          "intent": "AMAZON.HelpIntent",
+          "slots": []
+        },
+        {
+          "intent": "AMAZON.StopIntent",
+          "slots": []
+        }
+      ]
+    }
+  ]
+}
