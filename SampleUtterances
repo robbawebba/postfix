@@ -8,23 +8,3 @@ SolvePostfix find {OperandA} {OperandB} {Operator}
 SolvePostfix calculate {OperandA} {OperandB} {Operator}
 SolvePostfix compute {OperandA} {OperandB} {Operator}
 SolvePostfix {OperandA} {OperandB} {Operator}
-WrongOrder what is {OperandA} {Operator} {OperandB}
-WrongOrder what {OperandA} {Operator} {OperandB} is
-WrongOrder what is {OperandA} {Operator} {OperandB} equal to
-WrongOrder what {OperandA} {Operator} {OperandB} equals
-WrongOrder what {OperandA} {Operator} {OperandB} is equal to
-WrongOrder solve {OperandA} {Operator} {OperandB}
-WrongOrder find {OperandA} {Operator} {OperandB}
-WrongOrder calculate {OperandA} {Operator} {OperandB}
-WrongOrder compute {OperandA} {Operator} {OperandB}
-WrongOrder {OperandA} {Operator} {OperandB}
-WrongOrder what is {Operator} {OperandA} {OperandB}
-WrongOrder what {Operator} {OperandA} {OperandB} is
-WrongOrder what is {Operator} {OperandA} {OperandB} equal to
-WrongOrder what {Operator} {OperandA} {OperandB} equals
-WrongOrder what {Operator} {OperandA} {OperandB} is equal to
-WrongOrder solve {Operator} {OperandA} {OperandB}
-WrongOrder find {Operator} {OperandA} {OperandB}
-WrongOrder calculate {Operator} {OperandA} {OperandB}
-WrongOrder compute {Operator} {OperandA} {OperandB}
-WrongOrder {Operator} {OperandA} {OperandB}
