@@ -1,4 +1,7 @@
 SolvePostfix what is {Operand1} {Operand2} {Operator}
 SolvePostfix what {Operand1} {Operand2} {Operator} is
 SolvePostfix solve {Operand1} {Operand2} {Operator}
+SolvePostfix find {Operand1} {Operand2} {Operator}
+SolvePostfix calculate {Operand1} {Operand2} {Operator}
+SolvePostfix compute {Operand1} {Operand2} {Operator}
 SolvePostfix {Operand1} {Operand2} {Operator}
