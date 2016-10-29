@@ -1,3 +1,6 @@
+
+from __future__ import print_function
+
 def lambda_handler(event, context):
     '''
     AWS Lambda Entry Point. JSON body of the request
@@ -6,7 +9,7 @@ def lambda_handler(event, context):
 
     '''Application ID verification'''
     if (event['session']['application']['applicationId'] !=
-        "amzn1.echo-sdk-ams.app.bd304b90-xxxx-xxxx-xxxx-1e4fd4772bab"):
+        "amzn1.ask.skill.c83f0d37-a9da-4a83-9f91-da9c8f6d62ce"):
         raise ValueError("Invalid Application ID")
 
     elif event['request']['type'] == "IntentRequest":
@@ -52,7 +55,7 @@ def get_welcome_response():
     # that is not understood, they will be prompted again with this text.
     reprompt_text = "Please ask me a math problem using post-fix notation " \
                     "such as one five plus, or four two times."
-    should_end_session = False
+    should_end_session = True
     return build_response(build_speechlet_response(
         card_title, speech_output, equation, reprompt_text, should_end_session))
 
@@ -62,36 +65,52 @@ def solve_postfix_intent_handler(intent):
     operator = intent['slots']['Operator']['value']
 
     card_title = 'Postfix Solution'
-    should_end_session = False
+    should_end_session = True
 
     solution = None
+    op = ""
 
     if operator == 'plus':
         solution = opA + opB
+        op = "+"
     elif operator == 'add':
         solution = opA + opB
+        op = "+"
     elif operator == 'addition':
         solution = opA + opB
+        op = "+"
     elif operator == 'minus':
         solution = opA - opB
+        op = "-"
     elif operator == 'subtract':
         solution = opA - opB
+        op = "-"
     elif operator == 'subtraction':
         solution = opA - opB
+        op = "-"
     elif operator == 'multiply':
         solution = opA * opB
+        op = "*"
     elif operator == 'times':
         solution = opA * opB
+        op = "*"
     elif operator == 'multiplication':
         solution = opA * opB
+        op = "*"
     elif operator == 'divide':
         solution = opA / opB
+        op = "/"
     elif operator == 'division':
         solution = opA / opB
+        op = "/"
     elif operator == 'modulo':
         solution = opA % opB
+        op = "%"
     elif operator == 'modulus':
         solution = opA % opB
+        op = "%"
+    else:
+        raise ValueError("Invalid intent")
 
     if solution == None:
         # Handle Error message response building
@@ -107,7 +126,7 @@ def solve_postfix_intent_handler(intent):
         speech_output = "The answer is" + str(solution) + "."
         reprompt_text = "You can ask me to solve a math problem " \
                         "using post-fix notation."
-        equation = intent['slots']['OperandA']['value'] + " " + intent['slots']['OperandB']['value'] + " " + intent['slots']['Operator']['value'] + " = " + str(solution)
+        equation = intent['slots']['OperandA']['value'] + " " + intent['slots']['OperandB']['value'] + " " + op + " = " + str(solution)
 
     speech_response = build_speechlet_response(
         card_title, speech_output, equation, reprompt_text, should_end_session)
@@ -130,8 +149,8 @@ def build_speechlet_response(title, output, equation, reprompt_text, should_end_
         },
         'card': {
             'type': 'Simple',
-            'title': 'SessionSpeechlet - ' + title,
-            'content': 'SessionSpeechlet - ' + equation
+            'title': title,
+            'content': equation
         },
         'reprompt': {
             'outputSpeech': {
