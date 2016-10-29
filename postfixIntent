@@ -1,18 +1,18 @@
 {
   "intents": [
     {
-      "intent": "solvePostfix",
+      "intent": "SolvePostfix",
       "slots": [
         {
-          "name": "operand1",
+          "name": "Operand1",
           "type": "AMAZON.NUMBER"
         },
         {
-          "name": "operand2",
+          "name": "Operand2",
           "type": "AMAZON.NUMBER"
         },
         {
-          "name": "operator",
+          "name": "Operator",
           "type": "OPERATORS"
         },
         {
