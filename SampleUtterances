@@ -1,5 +1,8 @@
 SolvePostfix what is {Operand1} {Operand2} {Operator}
 SolvePostfix what {Operand1} {Operand2} {Operator} is
+SolvePostfix what is {Operand1} {Operand2} {Operator} equal to
+SolvePostfix what {Operand1} {Operand2} {Operator} equals
+SolvePostfix what {Operand1} {Operand2} {Operator} is equal to
 SolvePostfix solve {Operand1} {Operand2} {Operator}
 SolvePostfix find {Operand1} {Operand2} {Operator}
 SolvePostfix calculate {Operand1} {Operand2} {Operator}
