@@ -4,26 +4,26 @@
       "intent": "SolvePostfix",
       "slots": [
         {
-          "name": "Operand1",
+          "name": "OperandA",
           "type": "AMAZON.NUMBER"
         },
         {
-          "name": "Operand2",
+          "name": "OperandB",
           "type": "AMAZON.NUMBER"
         },
         {
           "name": "Operator",
           "type": "OPERATORS"
-        },
-        {
-          "intent": "AMAZON.HelpIntent",
-          "slots": []
-        },
-        {
-          "intent": "AMAZON.StopIntent",
-          "slots": []
         }
       ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent",
+      "slots": []
+    },
+    {
+    "intent": "AMAZON.StopIntent",
+    "slots": []
     }
   ]
 }

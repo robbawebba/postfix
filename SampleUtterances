@@ -1,10 +1,10 @@
-SolvePostfix what is {Operand1} {Operand2} {Operator}
-SolvePostfix what {Operand1} {Operand2} {Operator} is
-SolvePostfix what is {Operand1} {Operand2} {Operator} equal to
-SolvePostfix what {Operand1} {Operand2} {Operator} equals
-SolvePostfix what {Operand1} {Operand2} {Operator} is equal to
-SolvePostfix solve {Operand1} {Operand2} {Operator}
-SolvePostfix find {Operand1} {Operand2} {Operator}
-SolvePostfix calculate {Operand1} {Operand2} {Operator}
-SolvePostfix compute {Operand1} {Operand2} {Operator}
-SolvePostfix {Operand1} {Operand2} {Operator}
+SolvePostfix what is {OperandA} {OperandB} {Operator}
+SolvePostfix what {OperandA} {OperandB} {Operator} is
+SolvePostfix what is {OperandA} {OperandB} {Operator} equal to
+SolvePostfix what {OperandA} {OperandB} {Operator} equals
+SolvePostfix what {OperandA} {OperandB} {Operator} is equal to
+SolvePostfix solve {OperandA} {OperandB} {Operator}
+SolvePostfix find {OperandA} {OperandB} {Operator}
+SolvePostfix calculate {OperandA} {OperandB} {Operator}
+SolvePostfix compute {OperandA} {OperandB} {Operator}
+SolvePostfix {OperandA} {OperandB} {Operator}
